@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAR 3D Model with OBJ</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- Marker AR.js untuk mendeteksi pola -->
+        <a-marker preset="hiro">
+            <!-- Memuat model 3D OBJ -->
+            <a-obj-model 
+                src="model.obj" 
+                mtl="model.mtl" 
+                scale="0.5 0.5 0.5">
+            </a-obj-model>
+        </a-marker>
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
